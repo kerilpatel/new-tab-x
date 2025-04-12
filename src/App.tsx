@@ -1,9 +1,9 @@
-import Dashboard from './pages/NewTab';
+import NewTab from './pages/NewTab';
 
 function App() {
   return (
     <div>
-      <Dashboard />
+      <NewTab />
     </div>
   );
 }
