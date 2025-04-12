@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux';
 import { getRefreshTimeInMilliseconds } from '../shared/enums/wallpaper-refresh-time.enum';
 import { getWallpapersFromListOfCategories } from '../shared/utils/wallpaper.utils';
 import { RootState } from '../store';
-import './styles/dashboard.css';
+import './styles/newtab.css';
 
 const FADE_DURATION = 1000;
 
-const Dashboard: React.FC = () => {
+const NewTab: React.FC = () => {
   const wallpaperCategories = useSelector(
     (state: RootState) => state.wallpaperCategories.wallpaperCategories
   );
@@ -64,7 +64,7 @@ const Dashboard: React.FC = () => {
   }, [fade, nextWallpaper]);
 
   return (
-    <div className="dashboard-container">
+    <div className="newtab-container">
       <div
         className="background-layer"
         style={{
@@ -80,12 +80,12 @@ const Dashboard: React.FC = () => {
           }}
         />
       )}
-      <div className="dashboard-overlay">
-        <h1>Dashboard</h1>
+      <div className="newtab-overlay">
+        <h1>NewTab</h1>
         <p>Your customized wallpaper is set as the background.</p>
       </div>
     </div>
   );
 };
 
-export default Dashboard;
+export default NewTab;
