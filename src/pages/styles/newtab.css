@@ -26,7 +26,7 @@
 
 .newtab-overlay {
   position: relative;
-  z-index: 2; /* Content over the background */
+  z-index: 2;
   color: #fff;
   padding: 2rem;
 }

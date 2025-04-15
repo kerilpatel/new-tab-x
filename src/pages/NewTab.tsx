@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import Dashboard from '../components/Dashboard';
 import { getRefreshTimeInMilliseconds } from '../shared/enums/wallpaper-refresh-time.enum';
 import { getWallpapersFromListOfCategories } from '../shared/utils/wallpaper.utils';
 import { RootState } from '../store';
-import './styles/newtab.css';
+import './styles/newTab.css';
 
 const FADE_DURATION = 1000;
 
@@ -81,8 +82,7 @@ const NewTab: React.FC = () => {
         />
       )}
       <div className="newtab-overlay">
-        <h1>NewTab</h1>
-        <p>Your customized wallpaper is set as the background.</p>
+        <Dashboard />
       </div>
     </div>
   );
